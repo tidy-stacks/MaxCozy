@@ -6,8 +6,4 @@ Deciding to showcase everything I learnt so far in terms of creating responsive 
 
 Here's what the site looks like along with the tea cup hamburger menu I implemented using HTML
 
-![Tea Main](https://user-images.githubusercontent.com/99679318/191575635-793ddcf7-175d-47f8-ad4c-e562f80e994c.jpeg)
-
-
-
 ![Hamburg Menu](https://user-images.githubusercontent.com/99679318/191575787-f841d26b-99e5-4d10-af2a-52ce5ae44660.png)
