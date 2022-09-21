@@ -1,0 +1,423 @@
+/*Browser Reset*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*Global Styles */
+/*Sets up Google's Benne as the font for the Document as well as size and line height. */
+html {
+  font-family: "Benne","Helvetica", Arial, sans-serif;
+  font-size:22px;
+  line-height: normal;
+}
+
+body { 
+  background-color: black;
+  color:seashell;
+  opacity: 0.9;
+}
+
+/*Header Styles: Lines 23-113. Class is for large screen. Id is for Hamburger Menu. Media Request:Line 70 */
+
+/*Menu Stuck to Top */
+.cozy {
+  position: fixed;
+  top: 0;
+  z-index:3;
+}
+
+/* For Bigger Screens*/
+/* Header Wrapper */
+.menunav {
+  width: 55.5rem;
+  background: #000;
+  border-bottom: 1px solid seashell;
+  height: 70px;
+}
+/* Horizontal Menu Style */
+/*Tea Cozy Logo*/
+.logo {
+  height:50px;
+  width:8.5rem;
+  margin-left: 10px;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+/*Navigation Links */
+.navitems {
+  display:flex;
+}
+.navitems a {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 10px;
+  color: #ffc200;
+  text-decoration: none;
+  text-align: center;
+}
+.navitems a:hover { 
+  opacity:0.6; 
+}
+
+/* Hiding The Tea Cup */
+#menunav label, #teacup {
+  display: none; 
+}
+
+/* Smaller Screen Teacup Hamburger Menu*/
+/*Media Request Styles */
+@media screen and (max-width: 768px) {
+  .menunav{
+    border-bottom:none;
+    background: #ffc200;
+    width:5rem;
+  }
+  
+  /*Hide Logo */
+  .logo {
+    display: none;
+  }
+   
+  /* Vertical Style Menu */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid black;
+    background: black;
+  }
+  /* Show the Tea Cup Icon */
+  #menunav label { 
+    display: inline-block; 
+    color: black;
+    background: #ffc200;
+    font-style: normal;
+    font-size: 1.5em;
+    padding: 10px;
+    height:50px;
+  }
+  
+  #hamitems:hover{
+    background:black;
+  }
+
+  /* Click to Toggle the Menu */
+  #hamitems { 
+    display: none; 
+  }
+ 
+  #menunav input:checked ~ #hamitems {   
+    display: block; 
+  }
+}
+
+/* Mission Statement Styles: Lines 114-147.Media Request: Line 133*/ 
+.goals {
+  height: 700px;
+  width:100%;
+  background-image: url("Images/img-mission-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  align-content:center;
+}
+
+.maine {
+  background-color:black;
+  opacity: 1;
+  text-align:center;
+  position: relative;
+  top: 300px;
+}
+
+@media screen and (max-width:768px) {
+  .mission {
+    height:20rem;
+    width:100%;
+    background-image: url("Images/img-mission-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    align-content:center;
+}
+  .maine {
+    width: 100%;
+    background-color:black;
+    text-align:center;
+ }  
+}
+
+/*Tea of the Month Styles: Lines 151-232. Media Request: Line 196*/
+/*Header*/
+.steeping{
+  margin-top:35px;
+  margin-left:10px;
+}
+/*How the Tea Flavors are displayed.*/
+.flavors {
+  display: grid;
+  grid-template-columns: repeat(3,350px);
+  grid-template-rows: repeat(2, 350px);
+  grid-gap: 60px;
+  margin-top: 44px;
+  justify-items: center;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  grid-auto-rows: 500px;
+  grid-auto-flow:  column;
+}
+/*Text Styles for the teas of the month: Lines 170-193*/
+.caption {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: #ffc200;
+  padding: 4px;
+}
+
+img {
+  width: 100%;
+  height: 250px;
+  padding:5px;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 0.1px;
+  text-align: justify;
+  color: seashell;
+  padding: 10px;
+}
+
+/*Vertical Scroll for Smaller Screens */
+@media screen and (max-width:768px) {
+  .steeping {
+    margin-top:14rem;
+    margin-left:10px;
+  }
+  
+  .flavors {
+    display: grid;
+    grid-template-columns: 350px;
+    grid-gap: 75px;
+    justify-items: center;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    grid-auto-rows: 350px;
+    grid-auto-flow:  row;
+  }
+
+  .caption {
+   font-size: 25px;
+   font-weight: 900;
+   letter-spacing: 0.3px;
+   text-align: center;
+   color: #ffc200;
+   padding: 2px;
+}
+
+ .description {
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 1.29;
+   letter-spacing: 0.1px;
+   text-align: justify;
+   color: seashell;
+   padding: 10px;
+ }
+}
+
+/*Hours of Operation Styles: Lines 234- 263. Media Request: Line 260.*/
+.brew{
+  margin-top: 5.5rem;
+  margin-left:10px;
+}
+
+.hours h3{
+  margin-top:25px;
+  margin-left:10px;
+}
+
+.times {
+    list-style:none;
+    margin-left:35px;
+  }
+/*Underlines the Bolded Text*/
+.times strong{
+  text-decoration: underline;
+}
+/*Makes the heart-shaped leaf Bullet*/ 
+.times li::before {
+  content:"\2767";
+  font-size:20px;
+  }
+
+@media screen and (max-width:768px) {
+    .brew{
+      margin-top:25.5rem;
+    }
+  }
+
+/*Location Styles: Lines 268-339. */
+/*Location Wrapper*/
+.location {
+  margin-top:35px;
+  height:650px;
+  width: 100%;
+  background-image: url("Images/img-locations-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+/*Location Header*/
+.location h2 {
+  color: black;
+  padding:3.5rem;
+  font-size: 2rem;
+  text-align:center;
+  position: center;
+}
+/*The adress squares styles: Lines 286-312.*/
+.address{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:10px;
+  justify-items: center;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+}
+
+.spot{
+  background-color:black;
+  width:9.5rem;
+  height:auto;
+  padding: 4px;
+}
+
+.spot h3{
+  padding: 6px;
+  text-align:center;
+}
+
+.spot h4{
+  padding:3px;
+  text-align:center;
+  line-height:32px;
+}
+/*Event Subsection Styles*/
+.events {
+  padding-top: 25px;
+  margin-left: 20px;
+}
+
+/*Makes the Phone Bullet*/
+.call {
+  list-style:none;
+  margin-left:35px;
+}
+
+.call li ::before {
+  content:"\260e";
+  font-size: 20px;  
+}
+
+/*Makes the Envelope Bullet*/
+.mail {
+  list-style:none;
+  margin-left:35px;
+}
+
+.mail li ::before {
+  content:"\1F582";
+  font-size: 20px;   
+}
+
+/*Contact and Newsletter Section: Lines 342-424*/
+/*Contact Info Header*/
+.contact{
+  padding-top:45px;
+  margin-left:10px;
+}
+
+/*Newsletter Styles and Form Styles*/
+/*Newletter Header*/
+.newsletter{
+  padding-top: 5px;
+  margin-left:10px;
+}
+
+/*Newsletter Email Form Styles. Lines: 355-387*/
+/*Text Box Styles. Lines:356-373*/
+input { 
+  padding: 4px;
+  margin: 5px;
+  outline: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 22px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  }
+ 
+input:hover{
+   border: 1px solid transparent;
+   box-shadow: 0 0 8px 0  #ffc200;
+   color: #ffc200;
+} 
+/*Submit Button Styles. Lines:375-394*/
+ button {
+   width: 150px;
+   border: none;
+   border-radius: 5px; 
+   background:  #ffc200;
+   font-family: "Benne", Arial;
+   font-size: 20px;
+   color: seashell;
+   cursor: pointer;
+}
+
+ button:hover {
+  background:  #ffa500;
+}
+
+.info {
+  padding-top: 20px;
+  margin-left: 10px
+}
+
+/*Contact Information Subsection Styles: Lines 398-424*/
+/*Makes the Phone Bullet*/
+.call {
+  list-style:none;
+  margin-left:35px;
+}
+
+.call li ::before {
+  content:"\260e";
+  font-size: 20px;  
+}
+
+/*Makes the Envelope Bullet*/
+.mail {
+  list-style:none;
+  margin-left:35px;
+}
+
+.mail li ::before {
+  content:"\1F582";
+  font-size: 20px;   
+}
+
+/*Footer Styles: Lines */
+.copyright{
+margin-top:20px;
+padding:5px;
+float: right;
+}
